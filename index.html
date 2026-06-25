@@ -57,11 +57,14 @@
             day: 'numeric'
         };
 
-        document.getElementById('date').textContent =
-            now.toLocaleDateString('da-DK', dateOptions);
+    document.getElementById('date').textContent =
+        now.toLocaleDateString('da-DK', dateOptions);
 
-        document.getElementById('time').textContent =
-            now.toLocaleTimeString('da-DK');
+    document.getElementById('time').textContent =
+        now.toLocaleTimeString('da-DK', {
+            hour: '2-digit',
+            minute: '2-digit'
+        });
     }
 
     updateClock();
